@@ -1,10 +1,10 @@
-import ImageWithFallback from './ImageWithFallback.jsx';
+import { asset } from './utils.js';
 
 export default function StephanieSection() {
   return (
     <section className="section artist-section" aria-labelledby="stephanie-title">
       <div className="container split-panel">
-        <div className="image-frame portrait"><ImageWithFallback name="stephanie-mensah.jpg" alt="Portrait de Stéphanie Mensah, artiste textile Stephie M design" /></div>
+        <div className="image-frame portrait"><img src={asset('stephanie-mensah.jpg')} alt="Portrait de Stéphanie Mensah, artiste textile Stephie M design" /></div>
         <div className="panel-copy">
           <p className="eyebrow">Artiste invitée</p>
           <h2 id="stephanie-title">Stéphanie Mensah — artiste textile</h2>
