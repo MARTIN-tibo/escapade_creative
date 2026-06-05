@@ -28,6 +28,6 @@ Exemples :
 - `atelier-textile_01.jpg`
 - `atelier-textile_02.jpg`
 
-Le fichier sans suffixe fonctionne aussi : `atelier-textile.jpg`.
+Le fichier sans suffixe fonctionne aussi : `atelier-textile.jpg`. Les extensions `.jpg`, `.jpeg`, `.png` et `.webp` sont acceptées.
 
 Si aucune image n’est disponible pour une zone, le site affiche un placeholder “Photo à ajouter”.

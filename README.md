@@ -157,7 +157,8 @@ public/images/hero-dune-pyla_01.jpg
 public/images/hero-dune-pyla_02.jpg
 ```
 
-Le site cherche automatiquement les fichiers de `_00` à `_12`, puis le fichier sans suffixe, par exemple `hero-dune-pyla.jpg`. Si aucune photo n’existe encore, un placeholder propre “Photo à ajouter” est affiché.
+Le site cherche automatiquement les fichiers de `_00` à `_12`, puis le fichier sans suffixe. Il accepte les extensions `.jpg`, `.jpeg`, `.png` et `.webp`. Par exemple, pour `hero-dune-pyla.jpg`, il trouvera aussi `hero-dune-pyla_00.jpeg`. Si aucune photo n’existe encore, un placeholder propre “Photo à ajouter” est affiché.
+
 
 
 ## Informations encore à confirmer
