@@ -1,4 +1,4 @@
-import ImageWithFallback from './ImageWithFallback.jsx';
+import { asset } from './utils.js';
 
 export default function RoomsPricingSection({ rooms, onBook }) {
   return (
@@ -12,7 +12,7 @@ export default function RoomsPricingSection({ rooms, onBook }) {
         <div className="rooms-grid">
           {rooms.map((room) => (
             <article className="room-card" key={room.id}>
-              <div className="room-image"><ImageWithFallback name={room.image} alt={`${room.name} à Vermont pour l’Escapade Créative au Pyla-sur-Mer`} /></div>
+              <div className="room-image"><img src={asset(room.image)} alt={`${room.name} à Vermont pour l’Escapade Créative au Pyla-sur-Mer`} /></div>
               <div className="room-content">
                 <h3>{room.name}</h3>
                 <p>{room.description}</p>

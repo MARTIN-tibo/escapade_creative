@@ -1,4 +1,4 @@
-import ImageWithFallback from './ImageWithFallback.jsx';
+import { asset } from './utils.js';
 
 const moments = ['Balades en forêt', 'Balades à l’océan', 'Impression botanique sur textile', 'Visites du Bassin d’Arcachon', 'Masterclasses inspirantes', 'Baignades', 'Dégustation d’huîtres', 'Rencontre avec un ostréiculteur', 'Couchers de soleil', 'Cuisine de marché'];
 
@@ -13,9 +13,9 @@ export default function ConceptSection() {
           <p>Chaque journée mêle exploration, atelier, cuisine de marché, temps libre et inspirations locales, avec un rythme ajusté selon la météo et l’énergie du groupe.</p>
         </div>
         <div className="image-collage" aria-label="Ambiances de l’escapade créative">
-          <ImageWithFallback name="bassin-arcachon.jpg" alt="Lumière du Bassin d’Arcachon pendant une escapade créative au Pyla-sur-Mer" />
-          <ImageWithFallback name="foret-pins.jpg" alt="Forêt de pins près de la Dune du Pyla pour une balade inspirante" />
-          <ImageWithFallback name="cuisine-marche.jpg" alt="Cuisine de marché conviviale avec fruits et légumes de saison" />
+          <img src={asset('bassin-arcachon.jpg')} alt="Lumière du Bassin d’Arcachon pendant une escapade créative au Pyla-sur-Mer" />
+          <img src={asset('foret-pins.jpg')} alt="Forêt de pins près de la Dune du Pyla pour une balade inspirante" />
+          <img src={asset('cuisine-marche.jpg')} alt="Cuisine de marché conviviale avec fruits et légumes de saison" />
         </div>
       </div>
       <div className="container chip-cloud" aria-label="Moments inclus dans le séjour">

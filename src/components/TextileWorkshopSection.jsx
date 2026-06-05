@@ -1,4 +1,4 @@
-import ImageWithFallback from './ImageWithFallback.jsx';
+import { asset } from './utils.js';
 
 const techniques = ['Peinture', 'Impressions par empreintes', 'Végétaux', 'Bois flotté', 'Coquillages', 'Patchwork', 'Broderie', 'Lin, chanvre ancien, textiles bruts'];
 
@@ -14,7 +14,7 @@ export default function TextileWorkshopSection({ onBook }) {
           <div className="tag-list">{techniques.map((technique) => <span key={technique}>{technique}</span>)}</div>
           <button className="btn btn-secondary-dark" onClick={() => onBook({ requestType: 'Atelier ponctuel', message: 'Je souhaite savoir quels ateliers textile sont ouverts aux personnes extérieures.' })}>Participer à un atelier</button>
         </div>
-        <div className="image-frame"><ImageWithFallback name="atelier-textile.jpg" alt="Atelier textile naturel avec impressions botaniques et fibres brutes au Pyla-sur-Mer" /></div>
+        <div className="image-frame"><img src={asset('atelier-textile.jpg')} alt="Atelier textile naturel avec impressions botaniques et fibres brutes au Pyla-sur-Mer" /></div>
       </div>
     </section>
   );
