@@ -122,6 +122,12 @@ Le dépôt contient une configuration `vercel.json` pour éviter les erreurs 404
 - Importer le dépôt GitHub.
 - Build command : `npm run build`.
 - Publish directory : `dist`.
+## Publication Vercel ou Netlify
+
+- Importer le dépôt GitHub.
+- Conserver les paramètres par défaut d’un site statique.
+- Aucun build command n’est nécessaire.
+- Le dossier de publication est la racine du projet.
 
 ## Informations à compléter
 
