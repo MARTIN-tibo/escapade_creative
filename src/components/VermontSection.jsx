@@ -1,10 +1,10 @@
-import { asset } from './utils.js';
+import MultiImage from './MultiImage.jsx';
 
 export default function VermontSection() {
   return (
     <section className="section vermont-section" id="maison" aria-labelledby="vermont-title">
       <div className="container split-panel">
-        <div className="image-frame wide"><img src={asset('maison-vermont.jpg')} alt="Maison Vermont au Pyla-sur-Mer face à la forêt de pins" /></div>
+        <div className="image-frame wide"><MultiImage name="maison-vermont.jpg" alt="Maison Vermont au Pyla-sur-Mer face à la forêt de pins" /></div>
         <div className="panel-copy">
           <p className="eyebrow">La maison</p>
           <h2 id="vermont-title">Vermont, une maison de famille face à la forêt</h2>

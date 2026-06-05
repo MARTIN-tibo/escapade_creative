@@ -145,6 +145,21 @@ Les coordonnées principales sont dans :
 
 Les images finales doivent être placées dans `public/images` avec les noms listés dans `public/images/README.md`.
 
+## Plusieurs photos par emplacement
+
+Chaque emplacement image peut afficher une seule photo ou un carrousel automatique. Pour ajouter plusieurs images, utilisez le même nom de base avec un suffixe `_00`, `_01`, `_02`, etc.
+
+Exemple pour l’image hero :
+
+```text
+public/images/hero-dune-pyla_00.jpg
+public/images/hero-dune-pyla_01.jpg
+public/images/hero-dune-pyla_02.jpg
+```
+
+Le site cherche automatiquement les fichiers de `_00` à `_12`, puis le fichier sans suffixe, par exemple `hero-dune-pyla.jpg`. Si aucune photo n’existe encore, un placeholder propre “Photo à ajouter” est affiché.
+
+
 ## Informations encore à confirmer
 
 - Dates exactes des prochaines sessions.

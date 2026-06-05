@@ -14,3 +14,15 @@ export function sessionStatus(status, places) {
   if (status === 'soon' || places <= 3) return { label: 'Bientôt complet', className: 'soon' };
   return { label: 'Disponible', className: 'available' };
 }
+
+
+export function imageCandidates(name, max = 12) {
+  const dotIndex = name.lastIndexOf('.');
+  if (dotIndex === -1) return [name];
+
+  const base = name.slice(0, dotIndex);
+  const extension = name.slice(dotIndex);
+  const numbered = Array.from({ length: max + 1 }, (_, index) => `${base}_${String(index).padStart(2, '0')}${extension}`);
+
+  return [...numbered, name];
+}
