@@ -1,0 +1,29 @@
+[
+  {
+    "id": "atelier-2026-09-16-matin",
+    "date": "2026-09-16",
+    "label": "Mercredi 16 septembre",
+    "time": "10h - 13h",
+    "price": 85,
+    "available": true,
+    "remainingPlaces": 4
+  },
+  {
+    "id": "atelier-2026-09-17-apres-midi",
+    "date": "2026-09-17",
+    "label": "Jeudi 17 septembre",
+    "time": "15h - 18h",
+    "price": 85,
+    "available": true,
+    "remainingPlaces": 2
+  },
+  {
+    "id": "atelier-2026-10-07-matin",
+    "date": "2026-10-07",
+    "label": "Mercredi 7 octobre",
+    "time": "10h - 13h",
+    "price": 85,
+    "available": false,
+    "remainingPlaces": 0
+  }
+]
