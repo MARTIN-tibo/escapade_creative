@@ -1,10 +1,11 @@
-import { asset, formatDateRange } from './utils.js';
+import { formatDateRange } from './utils.js';
+import ImageWithFallback from './ImageWithFallback.jsx';
 
 export default function Hero({ sessions, onBook }) {
   const nextSession = sessions.find((session) => session.status !== 'closed');
   return (
     <section className="hero section" id="top" aria-labelledby="hero-title">
-      <div className="hero-bg" aria-hidden="true"><img src={asset('hero-dune-pyla.jpg')} alt="" /></div>
+      <div className="hero-bg" aria-hidden="true"><ImageWithFallback name="hero-dune-pyla.jpg" alt="" /></div>
       <div className="container hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">Escapade Créative · au pied de la Dune du Pyla</p>

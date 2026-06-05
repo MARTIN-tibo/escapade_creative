@@ -145,6 +145,13 @@ Les coordonnées principales sont dans :
 
 Les images finales doivent être placées dans `public/images` avec les noms listés dans `public/images/README.md`.
 
+## Images temporaires depuis internet
+
+Le site tente d’abord d’afficher les images locales dans `public/images`. Si un fichier manque, le composant `ImageWithFallback` charge une image temporaire depuis Wikimedia Commons. Les sources sont listées dans `ATTRIBUTIONS.md`.
+
+Pour remplacer une image temporaire, ajoutez simplement une photo finale avec le même nom dans `public/images`. Les photos locales seront alors prioritaires.
+
+
 ## Informations encore à confirmer
 
 - Dates exactes des prochaines sessions.

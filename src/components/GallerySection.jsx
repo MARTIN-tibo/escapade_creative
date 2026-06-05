@@ -1,4 +1,4 @@
-import { asset } from './utils.js';
+import ImageWithFallback from './ImageWithFallback.jsx';
 
 const images = [
   ['bassin-arcachon.jpg', 'Lumière du Bassin d’Arcachon pendant le séjour créatif'],
@@ -18,7 +18,7 @@ export default function GallerySection() {
           <h2 id="gallery-title">Dune, forêt, textile, cuisine et esprit Bassin</h2>
         </div>
         <div className="gallery-grid">
-          {images.map(([file, alt]) => <figure key={file}><img src={asset(file)} alt={alt} /><figcaption>{alt}</figcaption></figure>)}
+          {images.map(([file, alt]) => <figure key={file}><ImageWithFallback name={file} alt={alt} /><figcaption>{alt}</figcaption></figure>)}
         </div>
       </div>
     </section>
