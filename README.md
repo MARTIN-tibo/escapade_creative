@@ -9,6 +9,10 @@ Site vitrine one-page responsive pour présenter et vendre des ateliers d’impr
 ├── index.html
 ├── styles.css
 ├── script.js
+├── package.json
+├── vercel.json
+├── scripts/
+│   └── build-static.mjs
 ├── data/
 │   └── sessions.json
 └── public/
@@ -21,6 +25,12 @@ Site vitrine one-page responsive pour présenter et vendre des ateliers d’impr
 Ce site est volontairement en HTML/CSS/JavaScript simple pour rester facile à publier sur GitHub Pages, Vercel ou Netlify.
 
 Depuis la racine du projet :
+
+```bash
+npm run start
+```
+
+Ou, sans npm :
 
 ```bash
 python3 -m http.server 8080
@@ -96,6 +106,22 @@ Tant qu’une photo est absente, le site affiche un aplat décoratif « Photo à
 4. Choisir le dossier racine `/`.
 5. Enregistrer : GitHub Pages publiera `index.html` avec `styles.css`, `script.js`, `data/sessions.json` et les images locales.
 
+## Publication Vercel
+
+Le dépôt contient une configuration `vercel.json` pour éviter les erreurs 404 liées à un mauvais dossier de sortie.
+
+1. Importer le dépôt GitHub dans Vercel.
+2. Choisir **Other** si Vercel demande un framework.
+3. Laisser Vercel lire automatiquement la configuration :
+   - Build command : `npm run build`
+   - Output directory : `dist`
+4. Si le projet Vercel existait déjà et affichait `404: NOT_FOUND`, vérifier dans **Settings > Build & Development Settings** que le dossier de sortie est bien `dist`, puis relancer un déploiement.
+
+## Publication Netlify
+
+- Importer le dépôt GitHub.
+- Build command : `npm run build`.
+- Publish directory : `dist`.
 ## Publication Vercel ou Netlify
 
 - Importer le dépôt GitHub.
