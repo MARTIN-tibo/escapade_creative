@@ -1,0 +1,11 @@
+{
+  "name": "atelier-tentures-de-joie",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Site vitrine statique pour les ateliers d’impression botanique sur textile Stephie M design.",
+  "scripts": {
+    "build": "node scripts/build-static.mjs",
+    "start": "python3 -m http.server 8080"
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "date": "2026-07-10",
+    "label": "Vendredi 10 juillet",
+    "slots": [
+      {
+        "time": "10h - 13h",
+        "available": true,
+        "remainingPlaces": 6
+      },
+      {
+        "time": "15h - 18h",
+        "available": true,
+        "remainingPlaces": 4
+      }
+    ]
+  },
+  {
+    "date": "2026-07-11",
+    "label": "Samedi 11 juillet",
+    "slots": [
+      {
+        "time": "10h - 13h",
+        "available": true,
+        "remainingPlaces": 5
+      },
+      {
+        "time": "15h - 18h",
+        "available": false,
+        "remainingPlaces": 0
+      }
+    ]
+  }
+]
