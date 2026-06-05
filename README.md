@@ -1,140 +1,157 @@
-# Stephie M design — Atelier Tentures de Joie
+# Escapade Créative — Pyla-sur-Mer
 
-Site vitrine one-page responsive pour présenter et vendre des ateliers d’impression botanique sur textile au Pyla-sur-Mer, sur le Bassin d’Arcachon.
+Site vitrine responsive en React + Vite pour présenter une escapade créative au pied de la Dune du Pyla, avec une offre principale de séjour complet et une offre secondaire d’ateliers ponctuels d’impression botanique sur textile.
 
 ## Structure des fichiers
 
 ```text
 .
 ├── index.html
-├── styles.css
-├── script.js
 ├── package.json
+├── vite.config.js
 ├── vercel.json
-├── scripts/
-│   └── build-static.mjs
-├── data/
-│   └── sessions.json
-└── public/
-    └── images/
-        └── README.md
+├── public/
+│   └── images/
+│       └── README.md
+└── src/
+    ├── App.jsx
+    ├── main.jsx
+    ├── styles.css
+    ├── components/
+    │   ├── Header.jsx
+    │   ├── Hero.jsx
+    │   ├── ConceptSection.jsx
+    │   ├── UniqueExperienceSection.jsx
+    │   ├── ProgramSection.jsx
+    │   ├── TextileWorkshopSection.jsx
+    │   ├── StephanieSection.jsx
+    │   ├── HeleneSection.jsx
+    │   ├── MasterclassSection.jsx
+    │   ├── VermontSection.jsx
+    │   ├── GallerySection.jsx
+    │   ├── RoomsPricingSection.jsx
+    │   ├── StandaloneWorkshopSection.jsx
+    │   ├── DatesSection.jsx
+    │   ├── BookingForm.jsx
+    │   ├── FAQ.jsx
+    │   ├── Footer.jsx
+    │   └── utils.js
+    └── data/
+        ├── retreatSessions.json
+        ├── workshopSessions.json
+        └── rooms.json
 ```
 
 ## Lancer le site localement
 
-Ce site est volontairement en HTML/CSS/JavaScript simple pour rester facile à publier sur GitHub Pages, Vercel ou Netlify.
-
-Depuis la racine du projet :
+Installer les dépendances :
 
 ```bash
-npm run start
+npm install
 ```
 
-Ou, sans npm :
+Lancer le serveur de développement :
 
 ```bash
-python3 -m http.server 8080
+npm run dev
 ```
 
-Puis ouvrir :
+Créer une version de production :
 
-```text
-http://localhost:8080
+```bash
+npm run build
 ```
 
-> Important : utilisez un petit serveur local plutôt qu’une ouverture directe du fichier `index.html`, car le calendrier charge `data/sessions.json` avec `fetch()`.
+Prévisualiser la version de production :
 
-## Modifier les prochaines dates
-
-Les sessions sont configurées dans `data/sessions.json`.
-
-Exemple :
-
-```json
-[
-  {
-    "date": "2026-07-10",
-    "label": "Vendredi 10 juillet",
-    "slots": [
-      {
-        "time": "10h - 13h",
-        "available": true,
-        "remainingPlaces": 6
-      },
-      {
-        "time": "15h - 18h",
-        "available": true,
-        "remainingPlaces": 4
-      }
-    ]
-  }
-]
+```bash
+npm run preview
 ```
 
-Règles pratiques :
+## Publication GitHub
 
-- `date` : au format `YYYY-MM-DD`, utilisé pour masquer automatiquement les dates passées.
-- `label` : texte affiché sur la carte de session.
-- `time` : créneau affiché, par exemple `10h - 13h` ou `15h - 18h`.
-- `available` : `true` pour ouvrir le créneau, `false` pour le rendre non cliquable.
-- `remainingPlaces` : nombre de places restantes. Le site affiche automatiquement :
-  - `Disponible` au-dessus de 2 places ;
-  - `Bientôt complet` à 1 ou 2 places ;
-  - `Complet` si `available` vaut `false` ou si `remainingPlaces` vaut `0`.
-
-Si aucune date future n’est disponible, le site affiche le message prévu : « Les prochaines dates seront annoncées prochainement. Laissez-nous vos coordonnées pour être prévenu. »
-
-## Ajouter les images
-
-Placez les photos finales dans `public/images` avec ces noms :
-
-- `hero-atelier-textile.jpg`
-- `impression-botanique.jpg`
-- `textile-lin-chanvre.jpg`
-- `atelier-participants.jpg`
-- `pyla-pinede.jpg`
-- `creation-textile.jpg`
-- `portrait-stephanie.jpg`
-
-Tant qu’une photo est absente, le site affiche un aplat décoratif « Photo à ajouter ».
-
-## Publication GitHub Pages
-
-1. Pousser le dépôt sur GitHub.
-2. Dans GitHub, aller dans **Settings > Pages**.
-3. Choisir la branche à publier, par exemple `main`.
-4. Choisir le dossier racine `/`.
-5. Enregistrer : GitHub Pages publiera `index.html` avec `styles.css`, `script.js`, `data/sessions.json` et les images locales.
+1. Créer un dépôt GitHub.
+2. Pousser le code sur la branche principale.
+3. Vérifier que `package.json`, `vite.config.js`, `vercel.json`, `src/` et `public/` sont bien présents.
 
 ## Publication Vercel
 
-Le dépôt contient une configuration `vercel.json` pour éviter les erreurs 404 liées à un mauvais dossier de sortie.
+Le projet est configuré pour Vercel avec `vercel.json`.
 
-1. Importer le dépôt GitHub dans Vercel.
-2. Choisir **Other** si Vercel demande un framework.
-3. Laisser Vercel lire automatiquement la configuration :
-   - Build command : `npm run build`
-   - Output directory : `dist`
-4. Si le projet Vercel existait déjà et affichait `404: NOT_FOUND`, vérifier dans **Settings > Build & Development Settings** que le dossier de sortie est bien `dist`, puis relancer un déploiement.
+- Framework : Vite.
+- Build command : `npm run build`.
+- Output directory : `dist`.
+
+Si un ancien projet Vercel affichait `404: NOT_FOUND`, vérifier dans **Settings > Build & Development Settings** que le dossier de sortie est bien `dist`, puis relancer un déploiement.
 
 ## Publication Netlify
 
-- Importer le dépôt GitHub.
 - Build command : `npm run build`.
 - Publish directory : `dist`.
-## Publication Vercel ou Netlify
 
-- Importer le dépôt GitHub.
-- Conserver les paramètres par défaut d’un site statique.
-- Aucun build command n’est nécessaire.
-- Le dossier de publication est la racine du projet.
+## Publication GitHub Pages
 
-## Informations à compléter
+Le fichier `vite.config.js` utilise `base: './'`, ce qui rend les chemins compatibles avec un sous-dossier GitHub Pages.
 
-- Adresse exacte de l’atelier.
-- Nombre de places définitif par session.
+1. Lancer `npm run build`.
+2. Publier le dossier `dist` via GitHub Actions ou une branche dédiée.
+
+## Modifier les prochaines dates d’escapade
+
+Les sessions complètes sont dans `src/data/retreatSessions.json`.
+
+Champs principaux :
+
+- `id` : identifiant unique.
+- `title` : nom affiché.
+- `startDate` et `endDate` : dates au format `YYYY-MM-DD`.
+- `status` : `available`, `soon` ou `closed`.
+- `placesRemaining` : nombre de places restantes.
+
+## Modifier les ateliers ponctuels
+
+Les ateliers ponctuels sont dans `src/data/workshopSessions.json`.
+
+Champs principaux :
+
+- `id` : identifiant unique.
+- `date` : date au format `YYYY-MM-DD`.
+- `label` : libellé affiché.
+- `time` : créneau, par exemple `10h - 13h`.
+- `price` : prix en euros.
+- `available` : `true` ou `false`.
+- `remainingPlaces` : nombre de places restantes.
+
+## Modifier les chambres et tarifs
+
+Les chambres sont dans `src/data/rooms.json`.
+
+Chaque chambre contient :
+
+- `name` : nom de la chambre.
+- `image` : nom du fichier dans `public/images`.
+- `description` : texte de présentation.
+- `rates` : liste des tarifs solo, duo ou trio.
+
+## Modifier les coordonnées
+
+Les coordonnées principales sont dans :
+
+- `src/components/BookingForm.jsx` pour Hélène, le téléphone, WhatsApp et l’email.
+- `src/components/Footer.jsx` pour le footer.
+- `src/components/StephanieSection.jsx` pour Stéphanie Mensah.
+
+## Images à ajouter
+
+Les images finales doivent être placées dans `public/images` avec les noms listés dans `public/images/README.md`.
+
+## Informations encore à confirmer
+
+- Dates exactes des prochaines sessions.
+- Nombre de places final.
+- Adresse exacte à afficher ou non.
 - Conditions d’annulation.
-- Confirmation du matériel fourni.
-- Mentions légales.
-- Politique de confidentialité.
-- Photos finales à utiliser dans `public/images`.
+- Modalités de paiement de l’acompte.
+- Matériel fourni.
+- Photos finales.
+- Mentions légales et politique de confidentialité.
