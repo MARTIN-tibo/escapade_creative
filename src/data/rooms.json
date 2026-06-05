@@ -1,0 +1,52 @@
+[
+  {
+    "id": "chambre-foret",
+    "name": "Chambre Forêt",
+    "image": "chambre-foret.jpg",
+    "description": "Très spacieuse, avec vue sur la forêt et de magnifiques levers de soleil. Salle de bain et WC privatifs.",
+    "rates": [
+      { "label": "Solo", "price": "1400 €" },
+      { "label": "Duo", "price": "1050 € / personne" }
+    ]
+  },
+  {
+    "id": "chambre-chateau-eau",
+    "name": "Chambre Château d’Eau",
+    "image": "maison-vermont.jpg",
+    "description": "Lit double, lavabo privé. Douche et WC partagés à l’étage principal.",
+    "rates": [
+      { "label": "Solo", "price": "1050 €" },
+      { "label": "Duo", "price": "930 € / personne" }
+    ]
+  },
+  {
+    "id": "chambre-nadette",
+    "name": "Chambre Nadette",
+    "image": "chambre-terrasse.jpg",
+    "description": "Un cocon paisible pour une personne, avec douche et lavabo privatifs. WC partagés.",
+    "rates": [
+      { "label": "Solo", "price": "1050 €" }
+    ]
+  },
+  {
+    "id": "children-room",
+    "name": "Chambre Esprit “Children’s Room”",
+    "image": "maison-vermont.jpg",
+    "description": "Lits superposés, lavabo privé. Douche et WC partagés à l’étage principal.",
+    "rates": [
+      { "label": "Solo", "price": "900 €" },
+      { "label": "Duo", "price": "850 € / personne" },
+      { "label": "Trio", "price": "800 € / personne" }
+    ]
+  },
+  {
+    "id": "chambres-terrasse",
+    "name": "Chambres Terrasse 1 & 2",
+    "image": "chambre-terrasse.jpg",
+    "description": "Chambres calmes face à la forêt avec de beaux levers de soleil. Une chambre avec lit double, l’autre avec deux lits simples. Salle de bain et WC partagés entre ces deux chambres.",
+    "rates": [
+      { "label": "Solo", "price": "980 €" },
+      { "label": "Duo", "price": "850 € / personne" }
+    ]
+  }
+]
