@@ -1,0 +1,18 @@
+[
+  {
+    "id": "escapade-septembre-2026",
+    "title": "Escapade créative - Septembre 2026",
+    "startDate": "2026-09-14",
+    "endDate": "2026-09-19",
+    "status": "available",
+    "placesRemaining": 8
+  },
+  {
+    "id": "escapade-octobre-2026",
+    "title": "Escapade créative - Octobre 2026",
+    "startDate": "2026-10-05",
+    "endDate": "2026-10-10",
+    "status": "soon",
+    "placesRemaining": 3
+  }
+]
